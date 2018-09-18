@@ -1,0 +1,95 @@
+/* Aditional classes to add style and override some of the presets in materialize */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.nav-wrapper .fa-bars {
+  font-size: 25px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.idea-text {
+  height: 100px;
+}
+
+.dash-status {
+  text-transform: capitalize;
+}
+
+#delete-form {
+  display: inline;
+}
+
+.idea-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.idea-flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 5px;
+}
+
+.idea-flex-item .card {
+  width: 250px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+.margin-right {
+  margin-right: 5px;
+}
+
+.btn-100px {
+  margin: 5px 0;
+  width: 100px;
+}
+
+.sidenav li > a > i.white-G {
+  color: #ffffff;
+}
+
+ul.idea-flex-wrap {
+  display: block;
+}
+
+ul.idea-flex-wrap > li {
+  display: inline;
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 427px) {
+  ul.idea-flex-wrap {
+    display: flex;
+    margin-bottom: 0;
+  }
+  ul.idea-flex-wrap > li {
+    flex-basis: 45%;
+    margin-bottom: 5px;
+  }
+  #copyright {
+    margin-right: 50px;
+  }
+  .source-code-name-tag {
+    float: left !important;
+  }
+  .source-code-name-tag > a:first-child {
+    margin-right: 220px;
+  }
+}

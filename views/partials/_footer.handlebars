@@ -1,0 +1,42 @@
+<footer class="page-footer light-blue accent-4">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">IdeaStore</h5>
+        <p class="grey-text text-lighten-4">Store and share your ideas</p>
+      </div>
+      <div class="col l6  s12">
+        <h5 class="white-text">Links</h5>
+        <ul class="idea-flex-wrap ">
+          <li><a class="grey-text text-lighten-3" href="/about">About</a></li>
+          <li><a class="grey-text text-lighten-3" href="/ideas">Public Ideas</a></li>
+          {{#if user}}
+          <li>
+            <a class="grey-text text-lighten-3" href="/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a class="grey-text text-lighten-3" href="/ideas/my"></i>My Ideas</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <div>
+        &copy;
+        <span id="copyright">
+          <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+          IdeaStore
+        </span>
+        <div class="grey-text text-lighten-3 right source-code-name-tag">
+          <a class="grey-text text-lighten-3 " href="https://github.com/VisionsOfDrifting">
+            Source Code <i class="fa fa-github margin-right"></i>
+          </a>
+          Created by
+          <a class="grey-text text-lighten-4" href="https://nickhtpappas.com/"> Nick Pappas </a>
+        </div>
+      </div>
+    </div>
+</footer>

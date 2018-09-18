@@ -1,0 +1,31 @@
+<h1>Ideas</h1>
+<div class="row idea-flex-wrap">
+  {{#each ideas}}
+  <div class="idea-flex-item">
+    <div class="card">
+      <div class="card-image">
+        {{#if user}}
+        {{!-- because we're inside of the each loop user.id pertains to the user who wrote the idea.
+        ../user.id escapes the loop and allows us to access the global user.id which belongs to the logged in user.
+        id is the idea id. --}}
+        {{{editIcon user.id ../user.id id}}}
+        {{/if}}
+      </div>
+      <div class="card-content center-align">
+        <h5>{{title}}</h5>
+        <!-- Notice you don't use parentheses for functions in handlebars. Parentheses are strictly for precedence. -->
+        <p class="idea-text">{{stripTags (truncate body 150)}}</p>
+        <br>
+        <div class="chip">
+          <img src="{{user.image}}"><a href="/ideas/user/{{user.id}}">{{user.firstName}} {{user.lastName}}</a>
+        </div>
+      </div>
+      <div class="card-action center-align">
+        <a class="btn grey" href="/ideas/show/{{id}}">READ MORE</a>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <p>No ideas found</p>
+  {{/each}}
+</div>

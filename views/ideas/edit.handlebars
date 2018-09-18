@@ -1,0 +1,40 @@
+<h1>Edit Idea</h1>
+<div class="row">
+  <form action="/ideas/{{idea.id}}?_method=PUT" method="post" class="col s12">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="row">
+      <input type="text" name="title" value="{{idea.title}}">
+      <label for="title">Title</label>
+    </div>
+    <div class="row">
+      <select name="status">
+        {{#select idea.status}}
+        <option value="public" selected>Public</option>
+        <option value="private">Private</option>
+        <option value="unpublished">Unpublished</option>
+        {{/select}}
+      </select>
+      <label for="title">Status</label>
+    </div>
+    <div class="row">
+      <p>
+        <label for="allowCommentsBox">
+          <!-- Add class .filled-in for a different effect -->
+          {{#if allowComments}}
+          <input type="checkbox" id="allowCommentsBox" name="allowComments" checked="checked">
+          {{else}}
+          <input type="checkbox" id="allowCommentsBox" name="allowComments">
+          {{/if}}
+          <span>Allow Comments</span>
+        </label>
+      </p>
+    </div>
+    <div class="row">
+      <div class="input-field">
+        <h5>What are your latest thoughts on this idea?</h5>
+        <textarea name="body">{{idea.body}}</textarea>
+      </div>
+    </div>
+    <input type="submit" value="Save" class="btn">
+  </form>
+</div>
