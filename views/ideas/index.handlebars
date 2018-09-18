@@ -14,7 +14,7 @@
       <div class="card-content center-align">
         <h5>{{title}}</h5>
         <!-- Notice you don't use parentheses for functions in handlebars. Parentheses are strictly for precedence. -->
-        <p class="idea-text">{{stripTags (truncate body 150)}}</p>
+        <p class="idea-text">{{truncate (stripTags body) 150}}</p>
         <br>
         <div class="chip">
           <img src="{{user.image}}"><a href="/ideas/user/{{user.id}}">{{user.firstName}} {{user.lastName}}</a>

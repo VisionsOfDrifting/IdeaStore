@@ -13,7 +13,7 @@ module.exports = {
     return str;
   }, // Regex to strip html tags
   stripTags: function(input) {
-    return input.replace(/<(?:.|\n)*?>/gm, " ");
+    return input.replace(/<(?:.|\n)*?>|.&nbsp;/gm, " ");
   },
   formatDate: function(date, format) {
     return moment(date).format(format);

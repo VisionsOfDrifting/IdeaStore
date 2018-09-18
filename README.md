@@ -6,7 +6,7 @@ This application was built using Node.js, Express, MongoDB, Handlebars, and Mate
 
 ## Live Demo
 
-https://nickhtpappas.com/projects/project-index
+https://pacific-lake-95761.herokuapp.com/
 
 #
 
